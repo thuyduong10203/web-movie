@@ -62,10 +62,9 @@
         @foreach($movies as $movie)
             <a class="movie" href="{{ url('/movie/' . $movie->id) }}">
                 <img src="{{ Storage::url($movie->image) }}" style="width:100%">
-                
+
                 <div class="movie-info">
                     <p class="movie-title">{{ $movie->movie_name_vn }}</p>
-                    
                     <p class="movie-date">{{ \Carbon\Carbon::parse($movie->release_date)->format('d/m/Y') }}</p>
                 </div>
             </a>

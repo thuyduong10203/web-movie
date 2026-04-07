@@ -3,12 +3,15 @@
     <head>
         <title>{{$title}}</title>
         <link rel="stylesheet" href="{{asset('library/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
 
+        <script src="{{asset('library/jquery-3.7.1.js')}}"></script>
         <script src="{{asset('library/jquery.slim.min.js')}}"></script>
         <script src="{{asset('library/popper.min.js')}}"></script>
         <script src="{{asset('library/bootstrap.bundle.min.js')}}"></script>
+        <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="{{asset('library/jquery-3.7.1.js')}}" ></script>
         <style>
             /* Định dạng màu nền và màu chữ của menu */
           
@@ -92,7 +95,7 @@
             <div class='banner'>
                 <div style="padding:20px 20px">
                     <h2>Welcome.</h2>
-                    <h3>Millions of movies, TV shows and people to discover. Explore now.
+                    <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
                 </div>
                 <div class='search-input'>
                     <form method="post" action="{{url('/timkiem')}}">
@@ -118,11 +121,9 @@
                     </div>
                 </div>
                     <div class='col-9'>
-                         {{$slot}}
-                    </div>
+                    {{$slot}}
                 </div>
-            </div>  
-         </div>
+            </div>
         </main>
     </body>
 </html>
