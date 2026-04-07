@@ -96,7 +96,7 @@
                 </div>
                 <div class='search-input'>
                     <form method="post" action="{{url('/timkiem')}}">
-                        <input type="text" name='keyword' placeholder="Nhập tên bộ phim yêu thích để tìm kiếm">
+                        <input type="text" name="keyword" placeholder="Nhập tên bộ phim yêu thích để tìm kiếm" value="{{ isset($keyword) ? $keyword : '' }}">
                         <button class="search-btn">Tìm kiếm</button>
                         {{csrf_field()}}
                     </form>
