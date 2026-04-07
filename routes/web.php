@@ -8,3 +8,5 @@ Route::get('/', [MovieController4::class, 'index']);
 Route::get('/movie/add', 'App\Http\Controllers\MovieController4@create')->name('movie.create');
 
 Route::post('/movie/add', 'App\Http\Controllers\MovieController4@store')->name('movie.store');
+Route::get('/', [App\Http\Controllers\MovieController1::class, 'index']);
+Route::get('/theloai/{id}', [App\Http\Controllers\MovieController1::class, 'index']);
